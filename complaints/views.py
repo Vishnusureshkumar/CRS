@@ -49,6 +49,7 @@ def regcomplaints(request):
         return redirect('/regcomplaints/')
     queryset =Regcomplaint.objects.all()
     context ={'regcomplaints':queryset}  
+    
     return render(request,'regcomplaints.html',context)
 
 def Viewstatcomplaints(request):

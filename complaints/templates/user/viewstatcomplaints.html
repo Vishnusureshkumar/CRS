@@ -1,13 +1,13 @@
 {% include 'base.html' %}
 {% include 'nav.html' %}
 
-
+{% include 'usersidebar.html' %}
     
 {% block content %}
 
 <h1 class="text-center"> Complaint Status</h1>
 <hr>
-<div class="container mt-5 ">
+<div style="padding-left: 173px;" class="container mt-5 ">
     
  
     <table class="table">
@@ -23,12 +23,15 @@
             <th scope="col">Files</th>
             <th scope="col">Complaint Description</th>
             <th scope="col">Media</th>
+            <th scope="col">Media</th>
+            <th scope="col">Media</th>
           </tr>
         </thead>
         <tbody>
+          
           {% for Regcomplaint in regcomplaints %}
           <tr>
-            <th scope="row">{{forloop.counter}}</th>
+            <th scope="row">{{user.forloop.counter}}</th>
             <td>{{Regcomplaint.name}}</td>
             <td>{{Regcomplaint.flatblock}}</td>
             <td>{{Regcomplaint.flatno}}</td>
@@ -38,10 +41,11 @@
             <td>{{Regcomplaint.complainttitle}}</td>
             <td>{{Regcomplaint.complaintdescription}}</td>
             <td>
-              <img src="/media/{{Regcomplaint.complaintmedia}}" style="height: 200px;"></td>
+              <img src="/media/{{Regcomplaint.complaintmedia}}" style="height: 100px;"></td>
           </tr>
           
           {% endfor %}
+          
         </tbody>
       </table>
 

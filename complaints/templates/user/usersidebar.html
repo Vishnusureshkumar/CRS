@@ -1,13 +1,13 @@
-<!--<style>
+<style>
 
     .sidenav {
       margin: 0;
       padding: 0;
       width: 250px;
       background-color: #111;
-      position: relative;
-      height: 100%;
-      overflow: auto;
+      position: absolute;
+      height: 100rem;
+      overflow: auto; 
      
     }
     
@@ -36,17 +36,23 @@
       .sidenav {padding-top: 15px;}
       .sidenav a {font-size: 18px;}
     }
+    li:hover{
+      background-color: black;
+      border-radius: 20px;
+      border: 1px solid white;
+  }
+  
     </style>
     
--->
-<!--<div class="sidenav">
-  <a href="{% url 'useri' %}">USER DASHBOARD</a>
-  <a href="{% url 'regcomplaints' %}"></a>
-  <a href="{% url 'viewstatcomplaints' %}"></a>
-  <a href="{% url 'feedcomplaints' %}"></a>
+
+<div class="sidenav">
+  <li><a href="{% url 'useri' %}">USER DASHBOARD</a></li>
+  <li><a href="{% url 'regcomplaints' %}">Add Complaints</a></li>
+    <li><a href="{% url 'viewstatcomplaints' %}"> Tracking Complaints</a></li>
+      <li><a href="{% url 'feedcomplaints' %}">Feedback</a></li>
 </div>
 
--->
+
 <div class="main">
     
 </div>
