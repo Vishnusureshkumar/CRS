@@ -1,0 +1,60 @@
+{% include 'base.html' %}
+{% include 'nav.html' %}
+{% include 'usersidebar.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1 class="text-center"> Complaint Registration Form</h1>
+  <hr>
+  <div class="container mt-5 mb-1">
+    <form class="col-6 mx-auto card p-3" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+        <h1 class="text-center"> Register Your Complaints</h1>
+        <hr>
+        <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Name</label>
+            <input name="name" required type="text" class="form-control" id="exampleInputName">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputflatblock" class="form-label">Flat Block</label>
+            <input name="flatblock" required type="text" class="form-control" id="exampleInputflatblock">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputflatno" class="form-label">Flat Number</label>
+            <input name="flatno" required type="number" class="form-control" id="exampleInputflatno">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputdate" class="form-label">Date</label>
+            <input name="date" required type="date" class="form-control" id="exampleInputdate">
+          </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input name="email" required  type="email" class="form-control"  aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputphoneno" class="form-label">Phone Numer</label>
+          <input name="phoneno" required  type="number" class="form-control" >
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputdate" class="form-label">Complaint Subject</label>
+          <input name="complainttitle" required type="text" class="form-control" id="exampleInputdate">
+        </div>
+        
+        <div class="mb-3">
+            <label for="exampleInputfiles" class="form-label">Files</label>
+            <input name="complaintmedia" required type="file" class="form-control" id="exampleInputfiles">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Complaint Description</label>
+            <textarea class="form-control" name="complaintdescription" required id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      
+      
+</div>
+{% endblock content %}
+{% include 'footer.html' %}

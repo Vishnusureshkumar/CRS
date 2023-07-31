@@ -1,0 +1,54 @@
+{% include 'base.html' %}
+{% include 'nav.html' %}
+
+
+    
+{% block content %}
+
+<h1 class="text-center"> Complaint Status</h1>
+<hr>
+<div class="container mt-5 ">
+    
+ 
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Flat Block</th>
+            <th scope="col">Flat Number</th>
+            <th scope="col">Date</th>
+            <th scope="col">Email address</th>
+            <th scope="col">Phone Numer</th>
+            <th scope="col">Complaint Subject</th>
+            <th scope="col">Files</th>
+            <th scope="col">Complaint Description</th>
+            <th scope="col">Media</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for Regcomplaint in regcomplaints %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{Regcomplaint.name}}</td>
+            <td>{{Regcomplaint.flatblock}}</td>
+            <td>{{Regcomplaint.flatno}}</td>
+            <td>{{Regcomplaint.date}}</td>
+            <td>{{Regcomplaint.email}}</td>
+            <td>{{Regcomplaint.phoneno}}</td>
+            <td>{{Regcomplaint.complainttitle}}</td>
+            <td>{{Regcomplaint.complaintdescription}}</td>
+            <td>
+              <img src="/media/{{Regcomplaint.complaintmedia}}" style="height: 200px;"></td>
+          </tr>
+          
+          {% endfor %}
+        </tbody>
+      </table>
+
+    
+</div>
+
+  
+
+{% endblock content %}
+{% include 'footer.html' %}

@@ -1,0 +1,48 @@
+
+    {% include 'base.html' %}
+    {% include 'navigation.html' %}
+    {% load crispy_forms_tags %}
+
+    {% block content %}
+    <form method="POST">
+    <div class="container w-50 my-5">
+        <h1 class="text-center">Memeber Login</h1>
+        
+            {% csrf_token %}
+            {{ login_form|crispy }}      
+          <br>
+          <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+        <p class="text-center">Don't have an account? <a href="{% url 'signup' %}">Create an account</a>.</p>
+      </div>
+      
+    
+   <!-- <form method="post">
+        <div class="container w-50 my-5">
+            <h2 class="text-center">Member LOGIN</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <label>Member Name</label>
+                <input type="text" class="form-control" name="uname">
+                <label>Password</label>
+                <input type="password" class="form-control" name="pwd">
+                <br>
+                <input type="submit" value="login" class="form-control btn btn-primary ">
+                <a href="{% url 'signup' %}" >Create a account</a>
+            </form>
+            
+        </div>
+
+        
+        <!-- <input type="button" value=""> -->
+        <!-- <div class="social">
+          <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div> 
+       
+    </form>-->
+   
+
+    {% endblock content %}
+{% include 'footer.html' %}
+
