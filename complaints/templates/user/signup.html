@@ -5,11 +5,11 @@
 
     <!--Register--> 
     <div class="container w-50 my-5">
-        <h1>Register</h1>
-        <form method="POST">
+        <h1 class="text-center">Registration Form</h1>
+        <form  method="POST">
             {% csrf_token %}
             {{ register_form|crispy }}                    
-            <button class="btn btn-primary" type="submit">Signup</button>
+        <br>    <button class="form-control btn btn-primary" type="submit">Signup</button>
         </form>
         <p class="text-center">If you already have an account, <a href="{% url 'logi' %}">login</a> instead.</p>
     </div>

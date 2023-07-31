@@ -11,7 +11,7 @@
             {% csrf_token %}
             {{ login_form|crispy }}      
           <br>
-          <button class="btn btn-primary" type="submit">Login</button>
+          <button class="form-control btn btn-primary" type="submit">Login</button>
     </form>
         <p class="text-center">Don't have an account? <a href="{% url 'signup' %}">Create an account</a>.</p>
       </div>
@@ -34,7 +34,7 @@
         </div>
 
         
-        <!-- <input type="button" value=""> -->
+         <input type="button" value=""> -->
         <!-- <div class="social">
           <div class="go"><i class="fab fa-google"></i>  Google</div>
           <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
